@@ -1,14 +1,12 @@
-# Udacity Blockchain Capstone
+# Decentralized Housing Product
 
-The capstone will build upon the knowledge you have gained in the course in order to build a decentralized housing product. 
+## Verifier on Rinkeby
 
-# Project Resources
+* Contract: [0x713c17f2Af08c752D1C0d424BcdAc631299691A0](https://rinkeby.etherscan.io/address/0x713c17f2Af08c752D1C0d424BcdAc631299691A0)
+* Transaction: [0xfdad3c5a7d7535ed02cf0de011332022a8eaf43e623c7937c41fa2bd62fd2302](https://rinkeby.etherscan.io/tx/0xfdad3c5a7d7535ed02cf0de011332022a8eaf43e623c7937c41fa2bd62fd2302)
 
-* [Remix - Solidity IDE](https://remix.ethereum.org/)
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Truffle Framework](https://truffleframework.com/)
-* [Ganache - One Click Blockchain](https://truffleframework.com/ganache)
-* [Open Zeppelin ](https://openzeppelin.org/)
-* [Interactive zero knowledge 3-colorability demonstration](http://web.mit.edu/~ezyang/Public/graph/svg.html)
-* [Docker](https://docs.docker.com/install/)
-* [ZoKrates](https://github.com/Zokrates/ZoKrates)
+## SolnSquareVerifier on Rinkeby
+
+* Contract: [0x43Eb61A0aF09CA56E166332832A82Cc632307A0E](https://rinkeby.etherscan.io/address/0x43Eb61A0aF09CA56E166332832A82Cc632307A0E)
+* Transaction: [0xc441922e5a8f91f20cde511e5dbada4a4d0564a1295aad7f26267b1afaa358f1](https://rinkeby.etherscan.io/tx/0xc441922e5a8f91f20cde511e5dbada4a4d0564a1295aad7f26267b1afaa358f1)
+

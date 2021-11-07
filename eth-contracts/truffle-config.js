@@ -17,7 +17,7 @@
  * phrase from a file you've .gitignored so it doesn't accidentally become public.
  *
  */
-
+ const HDWalletProvider = require("@truffle/hdwallet-provider");
  const fs = require('fs');
  const mnemonic = fs.readFileSync(".secret").toString().trim();
  const infuraKey = fs.readFileSync(".infura").toString().trim();;
@@ -47,7 +47,8 @@ module.exports = {
      },
 
      rinkeby: {
-      provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),
+      networkCheckTimeout: 1000000,
+      provider: () => new HDWalletProvider(mnemonic, `wss://rinkeby.infura.io/ws/v3/${infuraKey}`),
       network_id: 4,
       gas: 4500000,
       gasPrice: 10000000000,
