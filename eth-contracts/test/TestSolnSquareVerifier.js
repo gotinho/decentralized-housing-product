@@ -2,6 +2,7 @@ var SolnSquareVerifier = artifacts.require('SolnSquareVerifier');
 var Verifier = artifacts.require('Verifier');
 
 var proof = require('../../zokrates/code/square/proof.json');
+var proof0 = require('../../zokrates/code/square/proof_0.json');
 
 
 contract('SolnSquareVerifier', accounts => {
@@ -25,16 +26,18 @@ contract('SolnSquareVerifier', accounts => {
             await this.contract.mintNewNFT(accounts[1], 1, proof.proof.a, proof.proof.b, proof.proof.c, proof.inputs, { from: accounts[0] });
             let owner = await this.contract.ownerOf(1);
             assert.equal(owner, accounts[1]);
-
+            
             try {
                 await this.contract.mintNewNFT(accounts[1], 2, proof.proof.a, proof.proof.b, proof.proof.c, proof.inputs, { from: accounts[0] });
                 assert.fail();
             } catch (error) {
                 assert.exists(error);
             }
+           
+            await this.contract.mintNewNFT(accounts[1], 2, proof0.proof.a, proof0.proof.b, proof0.proof.c, proof0.inputs, { from: accounts[0] });
 
             let totalSupply = await this.contract.totalSupply();
-            assert.equal(totalSupply, 1);
+            assert.equal(totalSupply, 2);
         });
     });
 });
