@@ -1,5 +1,26 @@
 # Decentralized Housing Product
 
+## How to run the tests 
+
+Make sure [ganache](https://www.trufflesuite.com/ganache) is running on port 8545
+
+```
+npm install
+cd eth-contracts
+truffle test
+```
+
+## Rinkeby deploy
+
+Rename **.infura-example** to **.infura** and replace the file content with yours infura projet id.
+
+Rename **.secret-example** to **.secret** and replace the file content with your wallet mnemonic.
+
+```
+cd eth-contracts
+truffle migrate --network rinkeby
+```
+
 ## Verifier Contract on Rinkeby
 
 * Contract: [0x713c17f2Af08c752D1C0d424BcdAc631299691A0](https://rinkeby.etherscan.io/address/0x713c17f2Af08c752D1C0d424BcdAc631299691A0)
