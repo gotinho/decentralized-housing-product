@@ -19,8 +19,16 @@
  */
  const HDWalletProvider = require("@truffle/hdwallet-provider");
  const fs = require('fs');
- const mnemonic = fs.readFileSync(".secret").toString().trim();
- const infuraKey = fs.readFileSync(".infura").toString().trim();;
+ let mnemonic = 'bounce rabbit write palm celery fat sand solar frown swarm unfair human';
+ let infuraKey = 'INFURA PROJECT ID'
+
+ try {
+   mnemonic = fs.readFileSync(".secret").toString().trim();   // rename .infura-example to .infura and replace the content with your project ID
+   infuraKey = fs.readFileSync(".infura").toString().trim();  // rename .secret-example to .secret and past your wallet mnemonic
+ } catch (error) {
+   console.warn('Warn missing rinkeby config file. (.secret .infura)');
+ }
+  
 
 module.exports = {
   /**
